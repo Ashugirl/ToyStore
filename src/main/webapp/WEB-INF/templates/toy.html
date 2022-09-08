@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>toy</title>
+</head>
+<body>
+<h6>Name:</h6>
+<p th:text="${toy.name}"></p>
+<h6>Brand:</h6>
+<p th:text="${toy.brand}"></p>
+<h6>Price:</h6>
+
+<p th:text="${toy.price}"></p>
+[13:37] PEARL DE SMET
+<img th:src="@{/images/{toyImage}(toyImage= ${toy.imageLocation})}">
+
+
+</body>
+</html>
