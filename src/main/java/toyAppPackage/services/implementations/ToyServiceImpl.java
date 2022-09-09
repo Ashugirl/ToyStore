@@ -3,6 +3,7 @@ package toyAppPackage.services.implementations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import toyAppPackage.data.Toy;
+import toyAppPackage.data.ToyCreationParameters;
 import toyAppPackage.repositories.ToyRepository;
 import toyAppPackage.services.interfaces.ToyService;
 
@@ -38,4 +39,9 @@ public class ToyServiceImpl implements ToyService {
     public void createToy(Toy toy) {
         toyRepository.save(toy);
     }
+
+//    @Override
+//    public void setToyCreationParameters(ToyCreationParameters toyCreationParameters) {
+//        toyCreationParameters.save(toyCreationParameters);
+//    }
 }

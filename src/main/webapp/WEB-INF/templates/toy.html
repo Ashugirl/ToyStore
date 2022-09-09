@@ -5,15 +5,16 @@
     <title>toy</title>
 </head>
 <body>
-<h6>Name:</h6>
+<h2>Name:</h2>
 <p th:text="${toy.name}"></p>
-<h6>Brand:</h6>
+<h2>Brand:</h2>
 <p th:text="${toy.brand}"></p>
-<h6>Price:</h6>
-
+<h2>Price:</h2>
 <p th:text="${toy.price}"></p>
-[13:37] PEARL DE SMET
-<img th:src="@{/images/{toyImage}(toyImage= ${toy.imageLocation})}">
+
+<img th:src="@{/images/{toyImage}(toyImage= ${toy.imageLocation})}"> <br/>
+<a href="/addToy">Add another toy</a><br/>
+<a href="/toys">See all toys</a>
 
 
 </body>
