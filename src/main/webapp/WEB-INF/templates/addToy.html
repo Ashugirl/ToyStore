@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>addToy</title>
+    <link th:href="@{/styles/cssandjs/addToy.css}" rel="stylesheet" />
+
 </head>
 <body>
+<div id="container">
 <h1>Add a toy:</h1>
-<form action="#" th:action="@{/addToy}" method="post" th:object="${toy}">
-    <label>Name:</label>
-    <input type="text" th:field="*{name}"/><br/>
-    <label>Brand:</label>
-    <input type="text" th:field="*{brand}"/><br/>
-    <label>Price:</label>
-    <input type="text" th:field="*{price}"/><br/>
-    <input type="submit" value="Submit" /> <input type="reset" value="Reset"/>
-</form>
+<form class="form" action="#" th:action="@{/addToy}" method="post" th:object="${toy}">
+    <div class="field"><label>Name:</label>
+    <input type="text" th:field="*{name}"/><br/></div>
+    <div class="field"><label>Brand:</label>
+    <input type="text" th:field="*{brand}"/><br/></div>
+    <div class="field"><label>Price:</label>
+    <input type="text" th:field="*{price}"/><br/></div>
+    <div id="buttons"><input type="submit" value="Submit" /> <input type="reset" value="Reset"/></div>
+</form></div>
 
 
 </body>

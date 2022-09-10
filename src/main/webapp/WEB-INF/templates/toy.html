@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>toy</title>
+    <link th:href="@{/styles/cssandjs/toy.css}" rel="stylesheet" />
+
 </head>
 <body>
-<h2>Name:</h2>
+<h2 class="title">Name:</h2>
 <p th:text="${toy.name}"></p>
 <h2>Brand:</h2>
 <p th:text="${toy.brand}"></p>
 <h2>Price:</h2>
 <p th:text="${toy.price}"></p>
 
-<img th:src="@{/images/{toyImage}(toyImage= ${toy.imageLocation})}"> <br/>
+<img class="photo" th:src="@{/images/{toyImage}(toyImage= ${toy.imageLocation})}"> <br/>
 <a href="/addToy">Add another toy</a><br/>
 <a href="/toys">See all toys</a>
 
