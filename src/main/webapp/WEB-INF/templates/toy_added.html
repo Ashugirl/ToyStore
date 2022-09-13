@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/styles/cssandjs/toy_added.css}" rel="stylesheet" />
+
+</head>
+<body>
+<div>
+<div id="container">
+<h1>Toy added successfully!</h1>
+    <div id="added">
+<div class="info"><span>Name:</span><span th:text="${toy.name}"></span></div><br/>
+    <div class="info"><span>Brand:</span><span th:text="${toy.brand}"></span></div><br/>
+    <div class="info"><span>Price:</span><span th:text="${toy.price}"></span></div><br/>
+    </div>
+</div>
+
+<div class="buttons">
+<button><a href="/addToy">Add another toy</a></button>
+    <button><a href="/toys">See all toys</a></button>
+</div>
+</div>
+</body>
+</html>

@@ -2,9 +2,27 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
+    <title>toys</title>
+
 </head>
 <body>
+
+<a href="/addToy">Add a toy</a>
+
+
+<div th:each="t:${toys}">
+<h3>Name:</h3>
+<p th:text="${t.name}"></p>
+<h3>Brand:</h3>
+<p th:text="${t.brand}"></p>
+<h3>Price:</h3>
+<p th:text="${t.price}"></p>
+
+<img th:src="@{/images/{toyImage}(toyImage= ${t.imageLocation})}">
+<hr>
+</div>
 
 </body>
 </html>
